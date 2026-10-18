@@ -24,3 +24,145 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.markdown-content {
+  color: #d8deeb;
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #f8fafc;
+  font-weight: 650;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.markdown-content h1 {
+  font-size: 1.65rem;
+}
+
+.markdown-content h2 {
+  font-size: 1.35rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.1rem;
+}
+
+.markdown-content p {
+  margin: 0.85rem 0;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin: 0.8rem 0;
+  padding-left: 1.5rem;
+}
+
+.markdown-content ul {
+  list-style: disc;
+}
+
+.markdown-content ol {
+  list-style: decimal;
+}
+
+.markdown-content li {
+  padding-left: 0.25rem;
+  margin: 0.35rem 0;
+}
+
+.markdown-content strong {
+  color: #f5f3ff;
+  font-weight: 650;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid #8b5cf6;
+  padding-left: 1rem;
+  color: #a5b4fc;
+  margin: 1rem 0;
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  border: 1px solid #292d3c;
+  background: #090b12;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+}
+
+.markdown-content code {
+  font-family: Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.markdown-content :not(pre) > code {
+  background: #242136;
+  color: #c4b5fd;
+  border-radius: 0.3rem;
+  padding: 0.15rem 0.35rem;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid #303445;
+  padding: 0.65rem;
+  text-align: left;
+}
+
+.markdown-content th {
+  background: #1a1d2a;
+  color: #f8fafc;
+}
+
+.markdown-content a {
+  color: #a5b4fc;
+  text-decoration: underline;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #lesson-infographic,
+  #lesson-infographic * {
+    visibility: visible;
+  }
+
+  #lesson-infographic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+}
